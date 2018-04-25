@@ -1,0 +1,63 @@
+$(document).ready(function(){
+	//1、显示隐藏
+	$("#hide").click(function(){
+        $("p").hide();//隐藏
+	});
+	$("#show").click(function(){
+        $("p").show();//显示
+	});
+	$("#toggle").click(function(){
+        $("p").toggle(1000);//显示/隐藏
+	});
+	  //批量增加div，实现点击隐藏并移除
+	/*for(var i = 0;i<2;i++){
+		$("<div>").appendTo(document.body);
+	}
+	$("div").click(function(){
+         $(this).hide(2000,function(){
+         	$(this).remove();
+         });
+	});*/
+
+	//2、淡入淡出
+    $("#fadein").on("click",function(){
+    	$("#div1").fadeIn(1000);
+    	$("#div2").fadeIn(1000);
+    	$("#div3").fadeIn(1000);
+    	$("#div4").fadeIn(1000);
+    })//淡入
+    $("#fadeout").on("click",function(){
+    	$("#div1").fadeOut(1000);
+    	$("#div2").fadeOut(1000);
+    	$("#div3").fadeOut(1000);
+    	$("#div4").fadeOut(1000);
+    })//淡出
+    $("#fadeToggle").on("click",function(){
+    	$("#div1").fadeToggle(1000);
+    	$("#div2").fadeToggle(1000);
+    	$("#div3").fadeToggle(1000);
+    	$("#div4").fadeToggle(1000);
+    })//淡入/淡出
+    $("#fadeTo").on("click",function(){
+    	$("#div1").fadeTo(1000,0);
+    	$("#div2").fadeTo(1000,0.4);
+    	$("#div3").fadeTo(1000,0.7);
+    	$("#div4").fadeTo(1000,1);
+    })//透明变化效果，0表示完全透明，就是不显示
+
+    //3、滑动
+    $("#flipshow").click(function(){
+    	$("#content").slideDown(1000);
+    });//出现
+    $("#fliphide").click(function(){
+    	$("#content").slideUp(500);
+    });//隐藏
+
+    //4、回调
+    $("#callback").click(function(){
+    	/*$("p").hide(1000,function(){
+    		alert("动画结束，回调函数")
+    	})*/
+    	$("p").css("color","red").slideUp(1000).slideDown(1000);//多个效果同时调用，先隐藏再出现
+    });
+});

@@ -1,0 +1,19 @@
+$(document).ready(function(){
+	//垂直菜单
+	$(".main>a").click(function(){
+		var ulNode = $(this).next("ul");
+		/*if(ulNode.css("display")=="none"){
+			ulNode.css("display","block");
+		}
+		else{
+			ulNode.css("display","none");
+		}*/
+		ulNode.toggle(500);//比较好的方法
+	});
+    //水平菜单
+    $(".hmain").hover(function(){
+    	$(this).children("ul").slideDown();
+    },function(){
+    	$(this).children("ul").slideUp();
+    });
+});

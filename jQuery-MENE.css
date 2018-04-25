@@ -1,0 +1,41 @@
+ul,li{
+	list-style: none;
+}
+
+ul{
+	padding:0px;
+	margin:0px;
+}
+
+.main,.hmain{
+	width:100px;
+}
+
+li{
+	background-color: #eeeeee;
+}
+
+a{
+	text-decoration: none;
+	padding-left: 20px;
+	display: block;
+	width: 80px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.main a,.hmain a{
+	color: red;
+}
+.main li a,.hmain li a{
+	color:black;
+}
+
+.main ul,.hmain ul{
+	display: none;
+}
+
+.hmain{
+	float: left;
+	margin-right: 1px;
+}
